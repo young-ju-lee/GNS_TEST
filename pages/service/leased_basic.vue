@@ -1028,7 +1028,7 @@
 
 
 
-<div class="popup">
+<div class="popup" style="display: none;">
   <div class="page-contents">
 		<div class="container">
 			<div class="page-title" style="height:auto">
@@ -1054,7 +1054,7 @@
 			        <dd><input type="text" class="kt-input ml_0" title="상위주소" name="topStationText" id="topStationText"> <a href="javascript:" class="btn" onclick="stationSearch('T')">검색</a><br>
 			        	<div class="select-wrap">
 				            <select name="topStationCombo" id="topStationCombo" title="검색 옵션 선택">
-				              <option value="" selected="">상위주소 입력 후 검색 결과에서 상세 주소를 선택하세요</option>                      
+				              <option value="" selected>상위주소 입력 후 검색 결과에서 상세 주소를 선택하세요</option>                      
 				            </select>
 				          </div>
 			        </dd>
@@ -1065,7 +1065,7 @@
 			          <input type="text" class="kt-input ml_0" title="하위주소" name="subStationText" id="subStationText"> <a href="javascript:" class="btn" onclick="stationSearch('S')">검색</a><br>
 			          <div class="select-wrap">
 			            <select name="subStationCombo" id="subStationCombo" title="검색 옵션 선택">
-			              <option value="" selected="">하위주소 입력 후 검색 결과에서 상세 주소를 선택하세요</option>                         
+			              <option value="" selected>하위주소 입력 후 검색 결과에서 상세 주소를 선택하세요</option>                         
 			            </select>
 			          </div>
 			        </dd>

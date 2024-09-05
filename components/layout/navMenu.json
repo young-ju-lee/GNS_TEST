@@ -1,7 +1,7 @@
 [
     {
       "title": "제도소개",
-      "link": "#",
+      "link": "/intro/definition",
       "show": true,
       "intro": "kt그룹 국가정보통신서비스 제도소개 입니다.",
       "subMenu": [

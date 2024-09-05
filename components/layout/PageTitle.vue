@@ -3,10 +3,10 @@
     <div>
       <h2>{{ title }}</h2>
       <p v-html="description"></p>
-    </div>
-    <ul>
+        </div>
+        <ul>
       <li><nuxt-link to="/"><img src="@/assets/images/bullet_rocation_home.gif" alt="홈페이지 메인"></nuxt-link></li>
-      <li>제도소개</li>
+      <li v-for="(string, index) in path" :key="index">{{ string }}</li>
       <li><nuxt-link to="/intro/definition">{{ title }}</nuxt-link></li>
     </ul>
   </div>
@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
 interface Props {
+  path : Array<string>;
   title: string;
   description: string;
   highlight: string;
