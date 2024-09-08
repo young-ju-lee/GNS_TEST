@@ -53,8 +53,10 @@ import "@splidejs/vue-splide/css";
 <style lang="scss" scoped>
 .bottom-banner {
   position: relative;
+  text-align: center;
   .banner-text {
     position: absolute;
+    text-align: left;
     top: 60px;
     width: 100%;
     dl {

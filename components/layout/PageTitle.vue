@@ -3,21 +3,29 @@
     <div>
       <h2>{{ title }}</h2>
       <p v-html="description"></p>
-        </div>
-        <ul>
-      <li><nuxt-link to="/"><img src="@/assets/images/bullet_rocation_home.gif" alt="홈페이지 메인"></nuxt-link></li>
+    </div>
+    <ul>
+      <li>
+        <nuxt-link to="/">
+          <img
+              src="@/assets/images/bullet_rocation_home.gif"
+              alt="홈페이지 메인"
+          />
+        </nuxt-link>
+      </li>
       <li v-for="(string, index) in path" :key="index">{{ string }}</li>
-      <li><nuxt-link to="/intro/definition">{{ title }}</nuxt-link></li>
+      <li>
+        <nuxt-link to="/intro/definition">{{ title }}</nuxt-link>
+      </li>
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
 interface Props {
-  path : Array<string>;
+  path: Array<string>;
   title: string;
   description: string;
-  highlight: string;
 }
 
 const props = defineProps<Props>();
@@ -26,7 +34,7 @@ const props = defineProps<Props>();
 <style lang="scss" scoped>
 .page-title {
   position: relative;
-  background: url('@/assets/images/line_h2_text.gif') 0 100% repeat-x;
+  background: url("@/assets/images/line_h2_text.gif") 0 100% repeat-x;
   margin-top: 2rem;
   margin-bottom: 3rem;
 
@@ -39,7 +47,7 @@ const props = defineProps<Props>();
       font-size: 2rem;
       font-weight: normal;
       height: 100%;
-      background: url('@/assets/images/line_h2_title.gif') 0 100% repeat-x;
+      background: url("@/assets/images/line_h2_title.gif") 0 100% repeat-x;
       position: absolute;
     }
 
@@ -49,6 +57,10 @@ const props = defineProps<Props>();
       color: #9e9e9e;
       margin: 0;
       padding: 3.5rem 0 2rem 0;
+      span {
+        color: #e51c23;
+        font-weight: bold;
+      }
     }
   }
 
@@ -65,9 +77,10 @@ const props = defineProps<Props>();
       display: inline-block;
       color: #9e9e9e;
       padding-right: 1.5rem;
-      padding-left: .5rem;
-      background: url('@/assets/images/bullet_rocation_arrow.gif') 100% 0 no-repeat;
-      font-size: .9rem;
+      padding-left: 0.5rem;
+      background: url("@/assets/images/bullet_rocation_arrow.gif") 100% 0
+        no-repeat;
+      font-size: 0.9rem;
 
       &:last-child {
         padding-right: 0;
@@ -81,5 +94,4 @@ const props = defineProps<Props>();
     }
   }
 }
-
 </style>

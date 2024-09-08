@@ -1,9 +1,7 @@
 <template>
   <div class="wrapper">
     <layoutAppHeader />
-    <main>
-      <NuxtPage />
-    </main>
+    <NuxtPage />
     <layoutSiteMap />
     <layoutAppFooter />
     <div id="dimmed"></div>

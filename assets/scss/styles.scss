@@ -4,36 +4,36 @@
 @import url("base.scss");
 @import url("common.scss");
 
-
 /* Layout - Desktop & Base */
 .wrapper {
-    width: 100%;
+  width: 100%;
 
-    .container {
-        margin: 0 auto;
-        max-width: 1100px;
-        width: 90%;
-    }
+  .container {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 90%;
+  }
 
-    .container .row {
-        margin-left: -0.75rem;
-        margin-right: -0.75rem;
-    }
+  .container .row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
 }
 
 @include tablet {
-    body{
-        padding-top: 56px;
-    }
+  body {
+    padding-top: 56px;
+  }
 
-    img.responsive-img,
-video.responsive-video {
-  max-width: 100%;
-  height: auto; }
-  
+  img.responsive-img,
+  video.responsive-video {
+    max-width: 100%;
+    height: auto;
+  }
+
   img.responsive-img2,
-video.responsive-video {
-  max-width: 80%;
-  height: auto; }
+  video.responsive-video {
+    max-width: 80%;
+    height: auto;
+  }
 }
-
