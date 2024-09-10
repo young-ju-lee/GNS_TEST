@@ -33,7 +33,8 @@
           v-for="(menu, index) in navMenu"
           :key="index"
           v-show="menu.show"
-          :class="{ active: isActive(menu.link) }"
+          :class="{ active: isActive(menu) }"
+          @click="handleMenuClick"
         >
           <nuxt-link :to="menu.link">{{ menu.title }}</nuxt-link>
           <div class="submenu" :class="menu.class">
@@ -54,7 +55,7 @@
                   v-for="(subSub, subSubIndex) in sub.subMenu"
                   :key="subSubIndex"
                   v-show="subSub.show"
-                  :class="{ active: isActive(subSub.link) }"
+                  :class="{ active: isActive(subSub) }"
                 >
                   <nuxt-link :to="subSub.link">{{ subSub.title }}</nuxt-link>
                 </dd>
@@ -69,7 +70,7 @@
 
 <script setup lang="ts">
 import navMenuData from "./navMenu.json";
-import type { NavMenu } from '@/types/api';
+import type { NavMenu, SubMenu, SubSubMenu } from '@/types/api';
 
 const route = useRoute();
 
@@ -85,8 +86,18 @@ const toggleAccount = () => {
   isAccountOpen.value = !isAccountOpen.value;
 };
 
-const isActive = (link: string) => {
-  return route.path.includes(link);
+const isActive = (menu: NavMenu | SubMenu | SubSubMenu): boolean => {
+  if (route.path.includes(menu.link)) {
+    return true;
+  }
+  if ('subMenu' in menu) {
+    return menu.subMenu.some((sub: SubSubMenu) => isActive(sub));
+  }
+  return false;
+};
+
+const handleMenuClick = () => {
+  isNavMenuOpen.value = false;
 };
 
 onMounted(() => {
@@ -185,8 +196,7 @@ nav.gnb {
   > ul {
     > li {
       > a {
-        &:hover,
-        &.active {
+        &:hover {
           color: #e51c23;
           border-bottom: 4px solid #e51c23;
         }
@@ -207,14 +217,16 @@ nav.gnb {
       display: inline-block;
       padding: 0 1.75rem;
 
-      &:hover > {
-        a {
+      &:hover {
+         div.submenu {
+          display: block;
+        }
+      }
+
+      &.active {
+         > a {
           color: #e51c23;
           border-bottom: 4px solid #e51c23;
-        }
-
-        div.submenu {
-          display: block;
         }
       }
 
@@ -244,12 +256,9 @@ nav.gnb {
         }
       }
     }
-
     text-align: center;
     font-size: 0;
     margin-left: -3rem;
-
-    /* 191017 */
   }
 
   div.menu-title {
@@ -471,6 +480,11 @@ nav.gnb {
       > li {
         display: block;
         padding: 0;
+        &.active {
+          > a {
+            border-bottom: 1px solid #d1d1d1;
+          }
+        }
         > a {
           padding: 1rem 1.8rem;
           display: block;

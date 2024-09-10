@@ -94,4 +94,22 @@ const props = defineProps<Props>();
     }
   }
 }
+
+@include mobile {
+  .page-title {
+    div {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    ul {
+      top: 0px;
+    }
+  }
+}
 </style>

@@ -1,21 +1,22 @@
 <template>
-  <div class="page-contents">
-    <div class="container">
-      <layoutPageTitle
-        title="특징"
-        description="kt그룹 국가정보통신서비스의 <span class='kt-red-text'>특징</span>을 소개해드리겠습니다."
-        highlight="특징"
-      />
-      <div class="row">
-        <div class="col s12 l6">
+  <main>
+    <layoutPageTitle 
+      :path="['제도소개']"
+      title="특징" 
+      description="kt그룹 국가정보통신서비스의 <span>특징</span>을 소개해드리겠습니다." 
+    />
+    <!-- contents -->
+    <section>
+      <!-- row-content -->
+      <div class="row-content">
+        <div>
           <img
             src="@/assets/images/kt5g03_img1.jpg"
             class="responsive-img image-deco-1"
             alt="kt 서비스 사진"
           />
         </div>
-
-        <div class="col s12 l6">
+        <div>
           <h3>이용자 중심 서비스 제공체계</h3>
           <ul class="list-style1">
             <li>
@@ -51,57 +52,65 @@
           </ul>
         </div>
       </div>
-      <div class="row">
-      <div class="col s12 l6">
-        <h3>보안성 강화</h3>
-        <ul class="list-style1">
-          <li>
-            국가기관 트래픽과 민간 트래픽, 업무망(회선서비스망)과 인터넷
-            IP서비스망을 완전 분리
-            <ul>
-              <li>
-                주기별(년 1회) 국가정보통신서비스 인프라에 대한 보안지도점검을
-                통한 보안성 제고
-              </li>
-            </ul>
-          </li>
-          <li>
-            국가사이버안전관리규정 및 국가사이버안전매뉴얼, 정보통신기반보호법
-            등에 근거하여 통신사업자별 세부 보안지침을 수립하여 적용
-          </li>
-          <li>상용 인터넷망과의 접점지역(서울, 대전)에 보안 접속환경 구축</li>
-        </ul>
-        <h3>안정성 확보</h3>
-        <ul class="list-style1">
-          <li>
-            국가정보통신서비스의 효율적 · 안정적 운영을 위한 상시 감시 및 복구
-            체계 구축
-          </li>
-          <li>
-            장애 · 재난 등 통신장애가 발생할 경우, 즉각적 복구 가능한 무장애
-            통신망 구성
-            <ul>
-              <li>
-                통신장비, 전송경로 등에 대한 이중화 · 이원화 구성 등으로
-                장애발생시 즉각적 절체
-              </li>
-            </ul>
-          </li>
-        </ul>
+      <!-- //row-content -->
+      <!-- row-content -->
+      <div class="row-content">
+        <div>
+          <h3>보안성 강화</h3>
+          <ul class="list-style1">
+            <li>
+              국가기관 트래픽과 민간 트래픽, 업무망(회선서비스망)과 인터넷
+              IP서비스망을 완전 분리
+              <ul>
+                <li>
+                  주기별(년 1회) 국가정보통신서비스 인프라에 대한 보안지도점검을
+                  통한 보안성 제고
+                </li>
+              </ul>
+            </li>
+            <li>
+              국가사이버안전관리규정 및 국가사이버안전매뉴얼, 정보통신기반보호법
+              등에 근거하여 통신사업자별 세부 보안지침을 수립하여 적용
+            </li>
+            <li>상용 인터넷망과의 접점지역(서울, 대전)에 보안 접속환경 구축</li>
+          </ul>
+          <h3>안정성 확보</h3>
+          <ul class="list-style1">
+            <li>
+              국가정보통신서비스의 효율적 · 안정적 운영을 위한 상시 감시 및 복구
+              체계 구축
+            </li>
+            <li>
+              장애 · 재난 등 통신장애가 발생할 경우, 즉각적 복구 가능한 무장애
+              통신망 구성
+              <ul>
+                <li>
+                  통신장비, 전송경로 등에 대한 이중화 · 이원화 구성 등으로
+                  장애발생시 즉각적 절체
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <img
+            src="@/assets/images/kt5g03_img2.jpg"
+            class="responsive-img image-deco-1"
+            alt="kt 서비스 사진"
+          />
+        </div>
       </div>
-      <div class="col s12 l6 right-align">
-        <img
-          src="@/assets/images/kt5g03_img2.jpg"
-          class="responsive-img image-deco-1"
-          alt="kt 서비스 사진"
-        />
-      </div>
-    </div>
-    <div class="row">
-	      <div class="col s12 l6">
-            <img src="@/assets/images/kt5g03_img3.jpg" class="responsive-img image-deco-1" alt="kt 서비스 사진">
-          </div>
-	      <div class="col s12 l6">
+      <!-- //row-content -->
+      <!-- row-content -->
+      <div class="row-content">
+        <div>
+          <img
+            src="@/assets/images/kt5g03_img3.jpg"
+            class="responsive-img image-deco-1"
+            alt="kt 서비스 사진"
+          />
+        </div>
+        <div>
 	        <h3>관리체계</h3>
 	        <ul class="list-style1">
 	          <li>공정하고 올바른 이용제도의 운영과 안정적인 서비스 제공을 위하여 주관/전담기관을 통한 관리기능 강화</li>
@@ -115,57 +124,10 @@
 	        <ul class="list-style1">
 	          <li>전문성이 부족한 이용기관 및 신기술 적용을 위한 교육, 전문컨설팅 등 이용기관 전문기술지원 강화</li>
 	        </ul>
-	      </div>
-	    </div>
-    </div>
-
-    
-  </div>
+        </div>
+      </div>  
+      <!-- //row-content -->
+    </section>
+    <!-- //contents -->
+  </main>
 </template>
-
-<script setup lang="ts"></script>
-
-<style lang="scss" scoped>
-div.page-contents h3 {
-  margin: 0;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  position: relative;
-  line-height: 2.6rem;
-  color: #424242;
-}
-
-div.page-contents ul.list-style1 li {
-  padding-left: 1rem;
-  position: relative;
-  margin-bottom: 0.4rem;
-}
-
-div.page-contents ul.list-style1 li:before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 0;
-  width: 4px;
-  height: 8px;
-  color: #e51c23;
-  background: url("@/assets/images/icons/icon_chevron_right.png") no-repeat;
-  background-size: 4px;
-}
-
-div.page-contents h3:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1.2rem;
-  height: 2px;
-  background: #e51c23;
-}
-
-div.page-contents {
-  margin-bottom: 5rem;
-  line-height: 1.5;
-  color: #757575;
-}
-</style>

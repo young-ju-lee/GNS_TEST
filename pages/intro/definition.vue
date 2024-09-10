@@ -26,51 +26,7 @@
 </template>
 
 <script setup lang="ts">
-
 </script>
 
 <style lang="scss" scoped>
-main {
-    max-width: 1000px;
-    margin: 0 auto 65px;
-    line-height: 1.5;
-    color: #757575;
-    h3 {
-        margin: 0;
-        margin-bottom: 1rem;
-        font-size: 1.1rem;
-        position: relative;
-        line-height: 2.6rem;
-        color: #424242;
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 1.2rem;
-            height: 2px;
-            background: #e51c23;
-        }
-    }
-
-    ul.list-style1 {
-        margin-bottom: 25px;
-        li {
-            padding-left: 1rem;
-            position: relative;
-            margin-bottom: .4rem;
-            &:before {
-                content: '';
-                position: absolute;
-                top: 6px;
-                left: 0;
-                width: 4px;
-                height: 8px;
-                color: #e51c23;
-                background: url("@/assets/images/icons/icon_chevron_right.png") no-repeat;
-                background-size: 4px;
-            }
-        }
-    }
-}
 </style>
