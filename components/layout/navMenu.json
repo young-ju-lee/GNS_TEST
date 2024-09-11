@@ -51,12 +51,12 @@
       "subMenu": [
         {
           "title": "A. 전용회선서비스",
-          "link": "/service/ktservice/1",
+          "link": "/service/?tab=A",
           "show": true,
           "subMenu": [
             {
               "title": "기본회선서비스",
-              "link": "/service/leased_basic",
+              "link": "/service/leased",
               "show": true
             },
             {
@@ -73,7 +73,7 @@
         },
         {
           "title": "B. 인터넷서비스",
-          "link": "/service/ktservice/2",
+          "link": "/service/?tab=B",
           "show": true,
           "subMenu": [
             {
@@ -90,7 +90,7 @@
         },
         {
           "title": "C. 인터넷전화서비스",
-          "link": "/service/ktservice/3",
+          "link": "/service/?tab=C",
           "show": true,
           "subMenu": [
             {
@@ -117,7 +117,7 @@
         },
         {
           "title": "D. 무선서비스",
-          "link": "/service/ktservice/4",
+          "link": "/service/?tab=D",
           "show": true,
           "subMenu": [
             {
@@ -144,7 +144,7 @@
         },
         {
           "title": "E. CCTV서비스",
-          "link": "/service/ktservice/5",
+          "link": "/service/?tab=E",
           "show": true,
           "subMenu": [
             {

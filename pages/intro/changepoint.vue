@@ -9,12 +9,7 @@
     <PageMaintab
       label="제도변경사항"
       :tabs="tabs"
-      @tab-change="handleTabChange"
     />
-
-    <section>
-      <component :is="activeComponent" />
-    </section>
   </main>
 </template>
 
@@ -30,6 +25,4 @@ const tabs = [
   { name: 'sla', label: 'SLA', component: Changepointsla },
   { name: 'discount', label: '할인율', component: Changepointdis }
 ];
-
-const route = useRoute();
 </script>

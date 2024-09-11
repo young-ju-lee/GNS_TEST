@@ -9,10 +9,20 @@ interface _GlobalComponents {
     'LayoutPageTitle': typeof import("../components/layout/PageTitle.vue")['default']
     'LayoutSiteMap': typeof import("../components/layout/SiteMap.vue")['default']
     'PageMaintab': typeof import("../components/page/Maintab.vue")['default']
+    'PageServicetab': typeof import("../components/page/Servicetab.vue")['default']
+    'PageSubtab': typeof import("../components/page/Subtab.vue")['default']
     'PageChangepointChangepointdis': typeof import("../components/page/changepoint/Changepointdis.vue")['default']
     'PageChangepointChangepointsla': typeof import("../components/page/changepoint/Changepointsla.vue")['default']
     'PageChangepointChangepointspeed': typeof import("../components/page/changepoint/Changepointspeed.vue")['default']
     'PageChangepointChangeservice': typeof import("../components/page/changepoint/Changeservice.vue")['default']
+    'PageLeasedBackbone': typeof import("../components/page/leased/Backbone.vue")['default']
+    'PageLeasedBasic': typeof import("../components/page/leased/Basic.vue")['default']
+    'PageLeasedInfra': typeof import("../components/page/leased/Infra.vue")['default']
+    'PageServiceAservice': typeof import("../components/page/service/Aservice.vue")['default']
+    'PageServiceBservice': typeof import("../components/page/service/Bservice.vue")['default']
+    'PageServiceCservice': typeof import("../components/page/service/Cservice.vue")['default']
+    'PageServiceDservice': typeof import("../components/page/service/Dservice.vue")['default']
+    'PageServiceEservice': typeof import("../components/page/service/Eservice.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
@@ -43,10 +53,20 @@ interface _GlobalComponents {
     'LazyLayoutPageTitle': typeof import("../components/layout/PageTitle.vue")['default']
     'LazyLayoutSiteMap': typeof import("../components/layout/SiteMap.vue")['default']
     'LazyPageMaintab': typeof import("../components/page/Maintab.vue")['default']
+    'LazyPageServicetab': typeof import("../components/page/Servicetab.vue")['default']
+    'LazyPageSubtab': typeof import("../components/page/Subtab.vue")['default']
     'LazyPageChangepointChangepointdis': typeof import("../components/page/changepoint/Changepointdis.vue")['default']
     'LazyPageChangepointChangepointsla': typeof import("../components/page/changepoint/Changepointsla.vue")['default']
     'LazyPageChangepointChangepointspeed': typeof import("../components/page/changepoint/Changepointspeed.vue")['default']
     'LazyPageChangepointChangeservice': typeof import("../components/page/changepoint/Changeservice.vue")['default']
+    'LazyPageLeasedBackbone': typeof import("../components/page/leased/Backbone.vue")['default']
+    'LazyPageLeasedBasic': typeof import("../components/page/leased/Basic.vue")['default']
+    'LazyPageLeasedInfra': typeof import("../components/page/leased/Infra.vue")['default']
+    'LazyPageServiceAservice': typeof import("../components/page/service/Aservice.vue")['default']
+    'LazyPageServiceBservice': typeof import("../components/page/service/Bservice.vue")['default']
+    'LazyPageServiceCservice': typeof import("../components/page/service/Cservice.vue")['default']
+    'LazyPageServiceDservice': typeof import("../components/page/service/Dservice.vue")['default']
+    'LazyPageServiceEservice': typeof import("../components/page/service/Eservice.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'LazyNuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
@@ -72,6 +92,14 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 }
 
+declare module '@vue/runtime-core' {
+  export interface GlobalComponents extends _GlobalComponents { }
+}
+
+declare module '@vue/runtime-dom' {
+  export interface GlobalComponents extends _GlobalComponents { }
+}
+
 declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
@@ -83,10 +111,20 @@ export const LayoutAppHeader: typeof import("../components/layout/AppHeader.vue"
 export const LayoutPageTitle: typeof import("../components/layout/PageTitle.vue")['default']
 export const LayoutSiteMap: typeof import("../components/layout/SiteMap.vue")['default']
 export const PageMaintab: typeof import("../components/page/Maintab.vue")['default']
+export const PageServicetab: typeof import("../components/page/Servicetab.vue")['default']
+export const PageSubtab: typeof import("../components/page/Subtab.vue")['default']
 export const PageChangepointChangepointdis: typeof import("../components/page/changepoint/Changepointdis.vue")['default']
 export const PageChangepointChangepointsla: typeof import("../components/page/changepoint/Changepointsla.vue")['default']
 export const PageChangepointChangepointspeed: typeof import("../components/page/changepoint/Changepointspeed.vue")['default']
 export const PageChangepointChangeservice: typeof import("../components/page/changepoint/Changeservice.vue")['default']
+export const PageLeasedBackbone: typeof import("../components/page/leased/Backbone.vue")['default']
+export const PageLeasedBasic: typeof import("../components/page/leased/Basic.vue")['default']
+export const PageLeasedInfra: typeof import("../components/page/leased/Infra.vue")['default']
+export const PageServiceAservice: typeof import("../components/page/service/Aservice.vue")['default']
+export const PageServiceBservice: typeof import("../components/page/service/Bservice.vue")['default']
+export const PageServiceCservice: typeof import("../components/page/service/Cservice.vue")['default']
+export const PageServiceDservice: typeof import("../components/page/service/Dservice.vue")['default']
+export const PageServiceEservice: typeof import("../components/page/service/Eservice.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
@@ -117,10 +155,20 @@ export const LazyLayoutAppHeader: typeof import("../components/layout/AppHeader.
 export const LazyLayoutPageTitle: typeof import("../components/layout/PageTitle.vue")['default']
 export const LazyLayoutSiteMap: typeof import("../components/layout/SiteMap.vue")['default']
 export const LazyPageMaintab: typeof import("../components/page/Maintab.vue")['default']
+export const LazyPageServicetab: typeof import("../components/page/Servicetab.vue")['default']
+export const LazyPageSubtab: typeof import("../components/page/Subtab.vue")['default']
 export const LazyPageChangepointChangepointdis: typeof import("../components/page/changepoint/Changepointdis.vue")['default']
 export const LazyPageChangepointChangepointsla: typeof import("../components/page/changepoint/Changepointsla.vue")['default']
 export const LazyPageChangepointChangepointspeed: typeof import("../components/page/changepoint/Changepointspeed.vue")['default']
 export const LazyPageChangepointChangeservice: typeof import("../components/page/changepoint/Changeservice.vue")['default']
+export const LazyPageLeasedBackbone: typeof import("../components/page/leased/Backbone.vue")['default']
+export const LazyPageLeasedBasic: typeof import("../components/page/leased/Basic.vue")['default']
+export const LazyPageLeasedInfra: typeof import("../components/page/leased/Infra.vue")['default']
+export const LazyPageServiceAservice: typeof import("../components/page/service/Aservice.vue")['default']
+export const LazyPageServiceBservice: typeof import("../components/page/service/Bservice.vue")['default']
+export const LazyPageServiceCservice: typeof import("../components/page/service/Cservice.vue")['default']
+export const LazyPageServiceDservice: typeof import("../components/page/service/Dservice.vue")['default']
+export const LazyPageServiceEservice: typeof import("../components/page/service/Eservice.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const LazyNuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']

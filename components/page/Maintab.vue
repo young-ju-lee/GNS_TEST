@@ -66,7 +66,7 @@ const activeComponent = computed(() => {
     }
 
     div.current-label > a:after {
-      content: "expand_less";
+      content: "expand_less"; /* 변경 필요 */
     }
   }
 
