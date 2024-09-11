@@ -19,12 +19,14 @@
     "nuxi": "^3.13.1",
     "nuxt": "^3.13.1",
     "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^4.0.1",
     "vue": "^3.4.38",
     "vue-mdijs": "^0.5.12",
     "vue-router": "^4.3.2",
     "vue3-apexcharts": "^1.5.3"
   },
   "devDependencies": {
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
     "sass": "^1.77.4",
     "sass-loader": "^14.2.1",
     "stylelint": "^16.8.1",

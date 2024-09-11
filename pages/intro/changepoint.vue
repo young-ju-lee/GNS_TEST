@@ -1,10 +1,6 @@
 <template>
   <main>
-    <layoutPageTitle
-      :path="['제도소개']"
-      title="정의" 
-      description="kt그룹 4단계 국가정보통신서비스의 1,2,3단계 대비 달라진 <span>제도변경사항</span>을 알려드리겠습니다." 
-    />
+    <layoutPageTitle />
     
     <PageMaintab
       label="제도변경사항"

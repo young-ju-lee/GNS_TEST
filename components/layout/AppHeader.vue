@@ -34,10 +34,9 @@
           :key="index"
           v-show="menu.show"
           :class="{ active: isActive(menu) }"
-          @click="handleMenuClick"
         >
-          <nuxt-link :to="menu.link">{{ menu.title }}</nuxt-link>
-          <div class="submenu" :class="menu.class">
+          <nuxt-link :to="menu.link" @click="() => handleMenuClick(menu, 0, 1)">{{ menu.title }}</nuxt-link>
+          <div class="submenu">
             <div class="container">
               <div class="menu-title">
                 <h3>{{ menu.title }}</h3>
@@ -49,7 +48,7 @@
                 v-show="sub.show"
               >
                 <dt>
-                  <nuxt-link :to="sub.link">{{ sub.title }}</nuxt-link>
+                  <nuxt-link :to="sub.link" @click="() => handleMenuClick(menu, subIndex, 2)">{{ sub.title }}</nuxt-link>
                 </dt>
                 <dd
                   v-for="(subSub, subSubIndex) in sub.subMenu"
@@ -57,7 +56,7 @@
                   v-show="subSub.show"
                   :class="{ active: isActive(subSub) }"
                 >
-                  <nuxt-link :to="subSub.link">{{ subSub.title }}</nuxt-link>
+                  <nuxt-link :to="subSub.link" @click="() => handleMenuClick(menu, subSubIndex, 3)">{{ subSub.title }}</nuxt-link>
                 </dd>
               </dl>
             </div>
@@ -69,11 +68,12 @@
 </template>
 
 <script setup lang="ts">
+import { useNavStore } from '@/stores/nav/nav.stroe'
 import navMenuData from "./navMenu.json";
 import type { NavMenu, SubMenu, SubSubMenu } from '@/types/api';
 
 const route = useRoute();
-
+const navStore = useNavStore()
 const navMenu = ref<NavMenu[]>([]);
 
 const isNavMenuOpen = ref(false);
@@ -96,7 +96,8 @@ const isActive = (menu: NavMenu | SubMenu | SubSubMenu): boolean => {
   return false;
 };
 
-const handleMenuClick = () => {
+const handleMenuClick = (menu: NavMenu, menuIdx: number, depth: number) => {
+  navStore.setCurrentPath(menu, menuIdx, depth)
   isNavMenuOpen.value = false;
 };
 

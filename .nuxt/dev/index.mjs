@@ -91,7 +91,13 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {}
+  "public": {
+    "persistedState": {
+      "storage": "cookies",
+      "debug": false,
+      "cookieOptions": {}
+    }
+  }
 };
 const envOptions = {
   prefix: "NITRO_",
