@@ -43,11 +43,14 @@ onMounted(() => {
   }
 });
 
-watch(() => route.query.subtab, (newSubtab) => {
-  if (newSubtab && props.tabs.some(tab => tab.name === newSubtab)) {
-    activeTab.value = newSubtab.toString();
+watch(
+  () => route.query.tab,
+  (newTab) => {
+    if (newTab && props.tabs.some((tab) => tab.name === newTab)) {
+      activeTab.value = newTab as string;
+    }
   }
-});
+);
 
 const changeTab = (tab: string) => {
   activeTab.value = tab;

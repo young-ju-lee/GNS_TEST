@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "date": "2024-09-18T18:21:26.507Z",
-=======
-  "date": "2024-09-11T09:13:35.822Z",
->>>>>>> 0f29d48967638921b66f7fd4569034c0a3f609dd
+  "date": "2024-09-18T22:49:55.882Z",
   "preset": "nitro-dev",
   "framework": {
     "name": "nuxt",
@@ -13,15 +9,9 @@
     "nitro": "2.9.7"
   },
   "dev": {
-<<<<<<< HEAD
-    "pid": 19520,
+    "pid": 20676,
     "workerAddress": {
-      "socketPath": "\\\\.\\pipe\\nitro\\worker-19520-1.sock"
-=======
-    "pid": 131064,
-    "workerAddress": {
-      "socketPath": "\\\\.\\pipe\\nitro\\worker-131064-1.sock"
->>>>>>> 0f29d48967638921b66f7fd4569034c0a3f609dd
+      "socketPath": "\\\\.\\pipe\\nitro\\worker-20676-1.sock"
     }
   }
 }
