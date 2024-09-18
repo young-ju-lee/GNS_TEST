@@ -56,17 +56,17 @@
           "subMenu": [
             {
               "title": "기본회선서비스",
-              "link": "/service/leased",
+              "link": "/service/leased?tab=basic",
               "show": true
             },
             {
               "title": "백본회선서비스",
-              "link": "/service/leased_backbone",
+              "link": "/service/leased?tab=backbone",
               "show": true
             },
             {
               "title": "전용회선 인프라",
-              "link": "/service/leasedline_infra",
+              "link": "/service/leased?tab=infra",
               "show": true
             }
           ]

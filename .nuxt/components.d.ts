@@ -18,6 +18,10 @@ interface _GlobalComponents {
     'PageLeasedBackbone': typeof import("../components/page/leased/Backbone.vue")['default']
     'PageLeasedBasic': typeof import("../components/page/leased/Basic.vue")['default']
     'PageLeasedInfra': typeof import("../components/page/leased/Infra.vue")['default']
+    'PageLeasedBackbonePrice': typeof import("../components/page/leased/backbone/Price.vue")['default']
+    'PageLeasedBackboneService': typeof import("../components/page/leased/backbone/Service.vue")['default']
+    'PageLeasedBasicPrice': typeof import("../components/page/leased/basic/Price.vue")['default']
+    'PageLeasedBasicService': typeof import("../components/page/leased/basic/Service.vue")['default']
     'PageServiceAservice': typeof import("../components/page/service/Aservice.vue")['default']
     'PageServiceBservice': typeof import("../components/page/service/Bservice.vue")['default']
     'PageServiceCservice': typeof import("../components/page/service/Cservice.vue")['default']
@@ -62,6 +66,10 @@ interface _GlobalComponents {
     'LazyPageLeasedBackbone': typeof import("../components/page/leased/Backbone.vue")['default']
     'LazyPageLeasedBasic': typeof import("../components/page/leased/Basic.vue")['default']
     'LazyPageLeasedInfra': typeof import("../components/page/leased/Infra.vue")['default']
+    'LazyPageLeasedBackbonePrice': typeof import("../components/page/leased/backbone/Price.vue")['default']
+    'LazyPageLeasedBackboneService': typeof import("../components/page/leased/backbone/Service.vue")['default']
+    'LazyPageLeasedBasicPrice': typeof import("../components/page/leased/basic/Price.vue")['default']
+    'LazyPageLeasedBasicService': typeof import("../components/page/leased/basic/Service.vue")['default']
     'LazyPageServiceAservice': typeof import("../components/page/service/Aservice.vue")['default']
     'LazyPageServiceBservice': typeof import("../components/page/service/Bservice.vue")['default']
     'LazyPageServiceCservice': typeof import("../components/page/service/Cservice.vue")['default']
@@ -92,14 +100,6 @@ interface _GlobalComponents {
     'LazyNuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 }
 
-declare module '@vue/runtime-core' {
-  export interface GlobalComponents extends _GlobalComponents { }
-}
-
-declare module '@vue/runtime-dom' {
-  export interface GlobalComponents extends _GlobalComponents { }
-}
-
 declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
@@ -120,6 +120,10 @@ export const PageChangepointChangeservice: typeof import("../components/page/cha
 export const PageLeasedBackbone: typeof import("../components/page/leased/Backbone.vue")['default']
 export const PageLeasedBasic: typeof import("../components/page/leased/Basic.vue")['default']
 export const PageLeasedInfra: typeof import("../components/page/leased/Infra.vue")['default']
+export const PageLeasedBackbonePrice: typeof import("../components/page/leased/backbone/Price.vue")['default']
+export const PageLeasedBackboneService: typeof import("../components/page/leased/backbone/Service.vue")['default']
+export const PageLeasedBasicPrice: typeof import("../components/page/leased/basic/Price.vue")['default']
+export const PageLeasedBasicService: typeof import("../components/page/leased/basic/Service.vue")['default']
 export const PageServiceAservice: typeof import("../components/page/service/Aservice.vue")['default']
 export const PageServiceBservice: typeof import("../components/page/service/Bservice.vue")['default']
 export const PageServiceCservice: typeof import("../components/page/service/Cservice.vue")['default']
@@ -164,6 +168,10 @@ export const LazyPageChangepointChangeservice: typeof import("../components/page
 export const LazyPageLeasedBackbone: typeof import("../components/page/leased/Backbone.vue")['default']
 export const LazyPageLeasedBasic: typeof import("../components/page/leased/Basic.vue")['default']
 export const LazyPageLeasedInfra: typeof import("../components/page/leased/Infra.vue")['default']
+export const LazyPageLeasedBackbonePrice: typeof import("../components/page/leased/backbone/Price.vue")['default']
+export const LazyPageLeasedBackboneService: typeof import("../components/page/leased/backbone/Service.vue")['default']
+export const LazyPageLeasedBasicPrice: typeof import("../components/page/leased/basic/Price.vue")['default']
+export const LazyPageLeasedBasicService: typeof import("../components/page/leased/basic/Service.vue")['default']
 export const LazyPageServiceAservice: typeof import("../components/page/service/Aservice.vue")['default']
 export const LazyPageServiceBservice: typeof import("../components/page/service/Bservice.vue")['default']
 export const LazyPageServiceCservice: typeof import("../components/page/service/Cservice.vue")['default']

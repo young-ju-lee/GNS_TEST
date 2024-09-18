@@ -14,7 +14,7 @@
                 <p><b>(망분리회선)</b> 상.하위 주소가 동일한 기본회선서비스에 대하여 인터넷.<br>업무망 분리 용도 등으로 여러 회선을 묶어서 제공하는 서비스</p>
                 <p><b>(단기이용)</b> 선거.행사.대회 등 일정 기간 기본회선을 사용일수 기반으로 <br>제공하는 서비스</p>
                 
-                <a href="/service/leasedline_infra" class="btn">전용회선 인프라</a>
+                <a href="/service/leased?tab=infra" class="btn">전용회선 인프라</a>
             </div>
             </div>
         </li>
