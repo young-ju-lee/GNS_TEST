@@ -8,27 +8,27 @@
       <li>
         <nuxt-link to="/">
           <img
-              src="@/assets/images/bullet_rocation_home.gif"
-              alt="홈페이지 메인"
+            src="@/assets/images/bullet_rocation_home.gif"
+            alt="홈페이지 메인"
           />
         </nuxt-link>
       </li>
-      <li v-for="(string, index) in path" :key="index">{{ string }}</li>
-      <li>
-        <nuxt-link to="/intro/definition">{{ title }}</nuxt-link>
+      <li v-for="(item, index) in path" :key="index">
+        <nuxt-link :to="item.link">{{ item.title }}</nuxt-link>
       </li>
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-interface Props {
-  path: Array<string>;
-  title: string;
-  description: string;
-}
+import { computed } from 'vue'
+import { useNavStore } from '@/stores/nav/nav.stroe'
 
-const props = defineProps<Props>();
+const navStore = useNavStore()
+
+const path = computed(() => navStore.path)
+const title = computed(() => navStore.title)
+const description = computed(() => navStore.description)
 </script>
 
 <style lang="scss" scoped>
