@@ -56,6 +56,9 @@
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
       ],
+      "@vue/runtime-dom": [
+        "../node_modules/@vue/runtime-dom"
+      ],
       "unplugin-vue-router/client": [
         "../node_modules/unplugin-vue-router/client"
       ],
