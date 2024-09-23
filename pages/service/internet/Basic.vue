@@ -1,5 +1,5 @@
 <template>
-  <PageSubtab label="제도변경사항" :tabs="tabs" />
+  <PageSubtab label="" :tabs="tabs" />
 </template>
 
 <script setup lang="ts">
@@ -12,4 +12,9 @@ const tabs = [
 ];
 </script>
 
+<script lang="ts">
+export default {
+  name: 'Basic'
+}
+</script>
 <style lang="scss" scoped></style>

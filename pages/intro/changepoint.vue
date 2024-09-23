@@ -14,10 +14,10 @@
 </template>
 
 <script setup lang="ts">
-import Changeservice from '@/components/page/changepoint/Changeservice.vue';
-import Changepointspeed from '@/components/page/changepoint/Changepointspeed.vue';
-import Changepointsla from '@/components/page/changepoint/Changepointsla.vue';
-import Changepointdis from '@/components/page/changepoint/Changepointdis.vue';
+import Changeservice from './changepoint/Changeservice.vue';
+import Changepointspeed from './changepoint/Changepointspeed.vue';
+import Changepointsla from './changepoint/Changepointsla.vue';
+import Changepointdis from './changepoint/Changepointdis.vue';
 
 const tabs = [
   { name: 'service', label: '서비스', component: Changeservice },

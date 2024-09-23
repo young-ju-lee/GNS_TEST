@@ -9,17 +9,18 @@
           v-for="(menu, index) in navMenu"
           :key="index"
           class="col s12 m6 l2"
-          v-show="menu.main.show"
+          v-show="menu.show"
         >
-          <nuxt-link :to="menu.main.link" class="main">
-            {{menu.main.title}}
+          <nuxt-link :to="menu.link" class="main">
+            {{ menu.title }}
           </nuxt-link>
           <nuxt-link
             v-for="(sub, subIndex) in menu.subMenu"
             :key="subIndex"
             :to="sub.link"
             class="sub"
-            v-show="sub.show">
+            v-show="sub.show"
+          >
             {{ sub.title }}
           </nuxt-link>
         </div>
@@ -29,54 +30,11 @@
 </template>
 
 <script setup lang="ts">
-const navMenu = ref([
-  {
-    main: { title: "제도소개", link: "/intro/definition", show: true },
-    subMenu: [
-      { title: "정의", link: "/intro/definition", show: true },
-      { title: "특징", link: "/intro/feature", show: true },
-      { title: "서비스체계", link: "/intro/service", show: true },
-      { title: "제도변경사항", link: "/intro/changepoint", show: true },
-      { title: "추진체계", link: "/intro/counsel", show: true },
-      { title: "추진경과", link: "/intro/propulsion", show: true },
-    ],
-  },
-  {
-    main: { title: "kt그룹서비스", link: "/service/ktservice", show: true },
-    subMenu: [
-      { title: "전용회선서비스", link: "/service/ktservice", params: 1, show: true },
-      { title: "인터넷서비스", link: "/service/ktservice", params: 2, show: true },
-      { title: "인터넷전화서비스", link: "/service/ktservice", params: 3, show: true },
-      { title: "무선서비스", link: "/service/ktservice", params: 4, show: true },
-      { title: "CCTV서비스", link: "/service/ktservice", params: 5, show: true },
-    ],
-  },
-  {
-    main: { title: "이용안내", link: "/guide/procedure", show: true },
-    subMenu: [
-      { title: "KT특장점", link: "/guide/kt_merit", show: true },
-      { title: "KTsat특장점", link: "/guide/ktsat_merit", show: true },
-      { title: "이용절차", link: "/guide/procedure", show: true },
-      { title: "요금정보", link: "/guide/charges", show: true },
-      { title: "상담안내", link: "/guide/counsel", show: true },
-      { title: "운영/장애 안내", link: "/guide/kt_merit", show: true },
-    ],
-  },
-  {
-    main: { title: "트래픽조회", link: "/traffic/traffic1", show: false },
-    subMenu: [{ title: "트래픽조회서비스", link: "/traffic/traffic1", show: true }],
-  },
-  {
-    main: { title: "고객지원", link: "/support/notice_list", show: true },
-    subMenu: [
-      { title: "공지사항", link: "/support/notice_list", show: true },
-      { title: "자료실", link: "/support/dataroom_list", show: false },
-      { title: "FAQ", link: "/support/faq", show: true },
-      { title: "홈페이지 이용약관", link: "/member/agreement", show: true },
-      { title: "개인정보처리방침", link: "/member/personal", show: true },
-    ],
-  },
-]);
+import { useNavStore } from '@/stores/nav/nav.stroe';
+import type { NavMenu } from '@/types/api';
+
+const navStore = useNavStore();
+const navMenu = computed(() => navStore.navMenu);
 </script>
 
 <style lang="scss" scoped>

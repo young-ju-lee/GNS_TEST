@@ -21,14 +21,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import type { NavMenu, SubMenu } from '@/types/api'
-import navMenuData from '@/components/layout/navMenu.json'
+import { useNavStore } from '@/stores/nav/nav.stroe';
+import type { NavMenu } from '@/types/api'
+
+
+const navStore = useNavStore();
+const navMenu = computed(() => navStore.navMenu);
 
 const route = useRoute()
-
-const navMenu = ref<NavMenu[]>(navMenuData)
 
 const path = ref<NavMenu[]>([])
 const title = ref('')
@@ -56,8 +56,13 @@ const findParentMenu = (menus: any, currentPath: string, parentPath: NavMenu[] =
 }
 
 const getCurrentMenuPath = () => {
-  const currentPath = route.fullPath
-  const result = findParentMenu(navMenu.value, currentPath)
+  let currentPath = route.fullPath
+  let result = findParentMenu(navMenu.value, currentPath)
+  // 없을시 단계적으로 파라메터 제거
+  while (!result && currentPath.includes('?')) {
+    currentPath = currentPath.substring(0, currentPath.lastIndexOf('?'));
+    result = findParentMenu(navMenu.value, currentPath);
+  }
   if (result) {
     path.value = result
     title.value = result[result.length - 1].title
@@ -72,6 +77,9 @@ const getCurrentMenuPath = () => {
 }
 
 onMounted(() => {
+  if (!navStore.isLoaded) {
+    navStore.loadNavMenu();
+  }
   getCurrentMenuPath()
 })
 
@@ -157,7 +165,8 @@ watch(() => route.fullPath, () => {
     }
 
     ul {
-      top: 0px;
+      top: 100%;
+      padding-top:10px;
     }
   }
 }

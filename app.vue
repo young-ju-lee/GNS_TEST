@@ -9,6 +9,8 @@
 </template>
 
 <script setup lang="ts">
+import { useNavStore } from '@/stores/nav/nav.stroe';
+
 // SEO 처리
 useSeoMeta({
   title: 'kt그룹 국가정보통신서비스',
@@ -18,4 +20,10 @@ useSeoMeta({
   ogImage: '/images/og_img_01.png',
   twitterCard: 'summary_large_image',
 })
+
+const navStore = useNavStore();
+
+onMounted(() => {
+  navStore.loadNavMenu();
+});
 </script>

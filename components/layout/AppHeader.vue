@@ -69,17 +69,19 @@
 </template>
 
 <script setup lang="ts">
-import navMenuData from "./navMenu.json";
+import { useNavStore } from '@/stores/nav/nav.stroe';
 import type { NavMenu, SubMenu, SubSubMenu } from '@/types/api';
 
-const route = useRoute();
+const navStore = useNavStore();
+const navMenu = computed(() => navStore.navMenu);
 
-const navMenu = ref<NavMenu[]>([]);
+const route = useRoute();
 
 const isNavMenuOpen = ref(false);
 const toggleNavMenu = () => {
   isNavMenuOpen.value = !isNavMenuOpen.value;
 };
+
 
 const isAccountOpen = ref(false);
 const toggleAccount = () => {
@@ -99,10 +101,6 @@ const isActive = (menu: NavMenu | SubMenu | SubSubMenu): boolean => {
 const handleMenuClick = () => {
   isNavMenuOpen.value = false;
 };
-
-onMounted(() => {
-    navMenu.value = navMenuData;
-});
 </script>
 
 <style lang="scss" scoped>

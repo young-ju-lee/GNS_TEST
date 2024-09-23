@@ -1,10 +1,6 @@
 <template>
   <main>
-    <layoutPageTitle 
-      :path="['제도소개']"
-      title="특징" 
-      description="kt그룹 국가정보통신서비스의 <span>특징</span>을 소개해드리겠습니다." 
-    />
+    <layoutPageTitle />
     <!-- contents -->
     <section>
       <!-- row-content -->

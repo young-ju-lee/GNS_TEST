@@ -23,14 +23,14 @@
         "title": "서비스체계",
         "link": "/intro/service",
         "show": true,
-        "intro": "",
+        "intro": "kt그룹 국가정보통신서비스의 서비스체계를 소개해드리겠습니다.",
         "subMenu": []
       },
       {
         "title": "제도변경사항",
         "link": "/intro/changepoint",
         "show": true,
-        "intro": "",
+        "intro": "kt그룹 4단계 국가정보통신서비스의 1,2,3단계 대비 달라진 제도변경사항을 알려드리겠습니다.",
         "subMenu": []
       },
       {

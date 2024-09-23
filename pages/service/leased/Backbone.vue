@@ -1,5 +1,5 @@
 <template>
-  <PageSubtab label="제도변경사항" :tabs="tabs" />
+  <PageSubtab label="" :tabs="tabs" />
 </template>
 
 <script setup lang="ts">
@@ -11,5 +11,9 @@ const tabs = [
   { name: "price", label: "요금안내", component: Price, icon: "receipt" },
 ];
 </script>
-
+<script lang="ts">
+export default {
+  name: 'Backbone'
+}
+</script>
 <style lang="scss" scoped></style>

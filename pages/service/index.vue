@@ -10,11 +10,11 @@
 </template>
 
 <script setup lang="ts">
-import Aservice from "@/components/page/service/Aservice.vue";
-import Bservice from "@/components/page/service/Bservice.vue";
-import Cservice from "@/components/page/service/Cservice.vue";
-import Dservice from "@/components/page/service/Dservice.vue";
-import Eservice from "@/components/page/service/Eservice.vue";
+import Aservice from "./service/Aservice.vue";
+import Bservice from "./service/Bservice.vue";
+import Cservice from "./service/Cservice.vue";
+import Dservice from "./service/Dservice.vue";
+import Eservice from "./service/Eservice.vue";
 
 const tabs = [
   { name: "A", label: "A. 전용회선서비스", component: Aservice },

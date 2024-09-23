@@ -478,7 +478,36 @@ main {
           margin-bottom: 20px;
         }
       }
+
+      .service-info ul li > div > div {
+        &.image {
+          display: block;
+          width: 100%;
+          padding-right: 0;
+          padding-bottom: 1rem;
+        }
+      
+        &.text {
+          display: block;
+          width: 100%;
+          border-left: 0;
+          padding-top: 1rem;
+          border-top: 1px solid #d1d1d1;
+          padding-left: 0;
+      
+          p {
+            text-align: left;
+          }
+        }
+      }
+      .service-list ul li {
+        width: 100%;
+      }
   }
+
+
+  
+  
 }
 
 @include mobile {
