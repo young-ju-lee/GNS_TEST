@@ -1,9 +1,9 @@
 {
-  "_hash": "QN2buxE9OP",
+  "_hash": "JgIESgoTi1",
   "project": {
-    "rootDir": "C:/work/gns-front"
+    "rootDir": "C:/Users/user/Desktop/gns/gns-front"
   },
   "versions": {
-    "nuxt": "3.13.1"
+    "nuxt": "3.13.2"
   }
 }
