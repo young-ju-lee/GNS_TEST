@@ -1,75 +1,94 @@
-# Nuxt 3 Minimal Starter
+# gns-front
+## [ 폴더 구조 ]
+### 자동 생성
+**.nuxt**
+- Nuxt3로 개발 또는 빌드 시 자동으로 생성하는 폴더
+- Nuxt 내부적으로 사용하는 코드 및 파일들이 포함
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**server**
+- 서버 설정 관련 폴더
+- Nuxt3 서버의 기본 Typescript 설정
 
-## Setup
+**node_modules**
+- 프로젝트에 설치된 모든 npm 패키지들이 저장되는 폴더
+- npm install 명령어를 통해 자동으로 생성
 
-Make sure to install the dependencies:
+**.output**
+- SSR(서버 사이드 렌더링) 배포 폴더
+- npm run build로 생성
 
-```bash
-# npm
-npm install
+**dist**
+- 정적 사이트로 빌드 배포 폴더
+- npm rin generate로 생성
 
-# pnpm
-pnpm install
 
-# yarn
-yarn install
+### 작업 폴더
+**assets**
+- 정적 자산 폴더
+- 컴파일되지 않은 정적 자산들이 포함 (SCSS, 이미지, 폰트 등)
+- 경로에서 직접 접근은 대부분 불가
 
-# bun
-bun install
-```
+**components**
+- 공통으로 사용할 컴포넌트를 모아놓은 폴더
+- UI 요소들을 모듈화하고 재사용성을 높이기 위해 컴포넌트를 구분해 관리
 
-## Development Server
+**pages**
+- Nuxt의 라우팅 시스템과 연결된 폴더로 내부에 vue파일들은 각각 URL에 대응함
+- 파일명에 따라 자동으로 라우트 설정
 
-Start the development server on `http://localhost:3000`:
+**plugins**
+- 외부 라이브러리를 전역으로 사용하기 위해 폴더
+- Nuxt에서는 기본적으로 사용되는 라이브러리는 생략되기에 추가적인 것만 설정
 
-```bash
-# npm
-npm run dev
+**public**
+- 정적 파일들을 저장하는 폴더
+- 경로에서 직접 접근할 수 있음
+- 컴파일 과정 없이 그대로 서버에 배포
 
-# pnpm
-pnpm run dev
+**service**
+- API 호출과 관련된 설정, 공통 코드들이 들어가는 폴더
+- API 라우팅 또는 서버 렌더링에 관련된 핸들러들이 포함
 
-# yarn
-yarn dev
+**stores**
+- 상태 관리 폴더
+- 상태 관리를 위한 파일들 위치
+- 전역 상태 관리를 위해 pinia와 연결해서 사용
 
-# bun
-bun run dev
-```
+**types**
+- TypeScript 타입 정의 파일들을 저장하는 폴더
+- 전역적으로 사용할 인터페이스, 타입, 유틸리티 타입 등 정의
 
-## Production
+**utils**
+- 유틸리티 폴더
+- 공통 함수, 상수 등 정의 후 프로젝트 전반에서 재사용
 
-Build the application for production:
+## [ NPM 스크립트 ]
+### npm run build
+** "build": "nuxt build" **
+- 설명: Nuxt 애플리케이션을 프로덕션 환경에서 실행할 수 있도록 컴파일하는 명령어입니다. 서버 사이드 렌더링(SSR) 모드이든, 클라이언트 측 렌더링(CSR) 모드이든, 모든 애플리케이션 파일이 최적화되어 번들링됩니다.
+- 사용 목적: 배포를 위한 최종 빌드를 생성할 때 사용됩니다.
+- 결과: 컴파일된 파일들이 .output 폴더에 저장되고, 프로덕션 환경에서 실행될 준비가 됩니다.
 
-```bash
-# npm
-npm run build
+### npm run dev
+** "dev": "nuxt dev" **
+- 설명: Nuxt 애플리케이션을 개발 모드로 실행하는 명령어입니다. 이 모드는 핫 리로딩(hot reloading)을 지원하여 코드 변경 사항을 실시간으로 반영해 브라우저에서 볼 수 있습니다.
+- 사용 목적: 개발 중 애플리케이션을 실행하고 테스트할 때 사용됩니다.
+- 결과: 개발 서버가 실행되고, 기본적으로 http://localhost:3000에서 애플리케이션을 확인할 수 있습니다.
 
-# pnpm
-pnpm run build
+### npm run generate
+** "generate": "nuxt generate" **
+- 설명: Nuxt 애플리케이션을 정적 사이트로 프리렌더링하는 명령어입니다. 정적 HTML 파일로 변환되며, SSR과는 다르게 서버가 필요 없이 배포할 수 있습니다.
+- 사용 목적: 정적 사이트를 생성하고자 할 때, 예를 들어 Netlify, GitHub Pages와 같은 정적 호스팅 서비스에 배포할 때 사용됩니다.
+- 결과: 정적 파일들이 dist 폴더에 생성되며, 이 파일들을 정적 서버에 업로드할 수 있습니다.
 
-# yarn
-yarn build
+### npm run preview
+** "preview": "nuxt preview" **
+- 설명: generate 명령어로 생성된 정적 사이트를 미리보기 위한 명령어입니다. 정적 파일로 생성된 사이트를 로컬 서버에서 확인할 수 있습니다.
+- 사용 목적: generate 후 배포하기 전에 정적 파일이 잘 생성되었는지 확인할 때 사용됩니다.
+- 결과: 미리보기 서버가 실행되어, 생성된 정적 사이트를 로컬에서 볼 수 있습니다.
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### npm run postinstall
+** "postinstall": "nuxt prepare" **
+- 설명: npm 패키지를 설치한 후(npm install 또는 npm ci) 자동으로 실행되는 명령어입니다. nuxt prepare는 Nuxt3가 애플리케이션을 위한 설정 파일이나 캐시 등을 준비하는 과정입니다.
+- 사용 목적: 프로젝트의 모든 패키지 설치 후 필요한 추가 작업을 처리합니다. 주로 Nuxt가 프로젝트 구성을 미리 준비하는 작업을 합니다.
+- 결과: Nuxt가 내부적으로 사용되는 설정이나 파일을 준비해, 애플리케이션이 원활하게 동작할 수 있도록 합니다.
