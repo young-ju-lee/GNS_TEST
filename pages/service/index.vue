@@ -1,11 +1,7 @@
 <template>
   <main>
-    <layoutPageTitle
-      title="kt그룹서비스"
-      description="kt그룹 국가정보통신서비스의 <span>전용회선 서비스</span>를 알려드리겠습니다."
-    />
-
-    <PageServicetab label="기본회선 서비스" :tabs="tabs" />
+    <layoutPageTitle />
+    <PageMaintab :tabs="tabs" />
   </main>
 </template>
 

@@ -1,8 +1,7 @@
 <template>
   <main>
     <layoutPageTitle />
-
-    <PageMaintab label="기본회선 서비스" :tabs="tabs" />
+    <PageMaintab :tabs="tabs" />
   </main>
 </template>
 

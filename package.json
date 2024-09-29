@@ -16,6 +16,7 @@
     "@splidejs/vue-splide": "^0.6.12",
     "axios": "^1.7.2",
     "defu": "^6.1.4",
+    "is-builtin-module": "^4.0.0",
     "nuxi": "^3.13.1",
     "nuxt": "^3.13.1",
     "pinia": "^2.1.7",
@@ -27,7 +28,7 @@
   },
   "devDependencies": {
     "@pinia-plugin-persistedstate/nuxt": "^1.2.1",
-    "sass": "^1.77.4",
+    "sass": "^1.79.4",
     "sass-loader": "^14.2.1",
     "stylelint": "^16.8.1",
     "stylelint-config-standard-scss": "^13.1.0",

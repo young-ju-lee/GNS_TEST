@@ -70,16 +70,14 @@ const activeComponent = computed(() => {
     display: inline-block;
     > span {
         cursor: pointer;
-        background: #d1d1d1;
         border-radius: 0.4rem;
         padding: 2px 20px;
         display: block;
-        box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.48);
         i {
           font-family: "Material Icons";
           font-style: normal;
           vertical-align: middle;
-          font-size: 20px;
+          font-size: 24px;
         }
     }
     &.active {
@@ -87,7 +85,7 @@ const activeComponent = computed(() => {
         background: #e51c23;
         color: #fff;
         position: relative;
-       
+       box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.48);
         &:after {
           position: absolute;
           content: "";

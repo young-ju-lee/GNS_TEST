@@ -20,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineProps, defineEmits, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const props = defineProps({

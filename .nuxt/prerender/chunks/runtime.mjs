@@ -1,21 +1,21 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, setResponseHeader, send, getRequestHeaders, removeResponseHeader, createError, getResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/h3/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/ofetch/dist/node.mjs';
-import destr from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/destr/dist/index.mjs';
-import { createCall, createFetch } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/hookable/dist/index.mjs';
-import { klona } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/klona/dist/index.mjs';
-import { snakeCase } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/scule/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/defu/dist/defu.mjs';
-import { hash } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/ohash/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, decodePath, withLeadingSlash, withoutTrailingSlash } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/ufo/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/unstorage/drivers/fs.mjs';
-import file_58_47_47_47C_58_47Users_47user_47Desktop_47gns_47gns_45front_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js from 'file:///C:/Users/user/Desktop/gns/gns-front/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
-import unstorage_47drivers_47fs_45lite from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/unstorage/drivers/fs-lite.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/radix3/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, setResponseHeader, send, getRequestHeaders, removeResponseHeader, createError, getResponseHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file://C:/work/gns-front/node_modules/h3/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/work/gns-front/node_modules/ofetch/dist/node.mjs';
+import destr from 'file://C:/work/gns-front/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file://C:/work/gns-front/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/work/gns-front/node_modules/hookable/dist/index.mjs';
+import { klona } from 'file://C:/work/gns-front/node_modules/klona/dist/index.mjs';
+import { snakeCase } from 'file://C:/work/gns-front/node_modules/scule/dist/index.mjs';
+import defu, { defuFn } from 'file://C:/work/gns-front/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file://C:/work/gns-front/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, decodePath, withLeadingSlash, withoutTrailingSlash } from 'file://C:/work/gns-front/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/work/gns-front/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/work/gns-front/node_modules/unstorage/drivers/fs.mjs';
+import file_58_47_47_47C_58_47work_47gns_45front_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js from 'file:///C:/work/gns-front/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
+import unstorage_47drivers_47fs_45lite from 'file://C:/work/gns-front/node_modules/unstorage/drivers/fs-lite.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/work/gns-front/node_modules/radix3/dist/index.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'file://C:/Users/user/Desktop/gns/gns-front/node_modules/pathe/dist/index.mjs';
+import { dirname, resolve } from 'file://C:/work/gns-front/node_modules/pathe/dist/index.mjs';
 
 function getEnv(key, opts) {
   const envKey = snakeCase(key).toUpperCase();
@@ -66,7 +66,7 @@ const appConfig = defuFn(inlineAppConfig);
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "15bffc0d-8aa3-4f76-b16e-549c146195ae",
+    "buildId": "35069276-b2db-4936-b1ee-0aec397de913",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -135,7 +135,7 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
   }
 });
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/user/Desktop/gns/gns-front/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/work/gns-front/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -147,12 +147,12 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('internal:nuxt:prerender', file_58_47_47_47C_58_47Users_47user_47Desktop_47gns_47gns_45front_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///C:/Users/user/Desktop/gns/gns-front/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"C:/Users/user/Desktop/gns/gns-front/.nuxt/cache/nitro/prerender"}));
-storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\Users\\user\\Desktop\\gns\\gns-front\\.data\\kv"}));
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\user\\Desktop\\gns\\gns-front","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\user\\Desktop\\gns\\gns-front\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\user\\Desktop\\gns\\gns-front\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\user\\Desktop\\gns\\gns-front\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('internal:nuxt:prerender', file_58_47_47_47C_58_47work_47gns_45front_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///C:/work/gns-front/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"C:/work/gns-front/.nuxt/cache/nitro/prerender"}));
+storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"C:\\work\\gns-front\\.data\\kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\work\\gns-front","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\work\\gns-front\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\work\\gns-front\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\work\\gns-front\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -744,11 +744,11 @@ const _f4b49z = eventHandler((event) => {
   return readAsset(id);
 });
 
-const _lazy_furufZ = () => import('./_/renderer.mjs');
+const _lazy_iYYG8G = () => import('./_/renderer.mjs');
 
 const handlers = [
   { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },
-  { route: '/**', handler: _lazy_furufZ, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_iYYG8G, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

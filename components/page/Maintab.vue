@@ -22,7 +22,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineProps, defineEmits, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const props = defineProps({
@@ -34,7 +33,7 @@ const props = defineProps({
 });
 
 const emits = defineEmits(["tab-change"]);
-const label = ref(props.label);
+const label = ref(props.tabs[0].label);
 
 const route = useRoute();
 const router = useRouter();
@@ -48,6 +47,7 @@ onMounted(() => {
   } else {
     activeTab.value = props.tabs.length > 0 ? props.tabs[0].name : "";
   }
+  updateLabel();
 });
 
 watch(
@@ -56,6 +56,7 @@ watch(
     if (newTab && props.tabs.some((tab) => tab.name === newTab)) {
       activeTab.value = newTab as string;
     }
+    updateLabel();
   }
 );
 
@@ -65,6 +66,13 @@ const changeTab = (tab: string, tabLabel: string) => {
   router.push({ query: { ...route.query, tab } });
   label.value = tabLabel;
   toggleActive();
+};
+
+const updateLabel = () => {
+  const activeTabData = props.tabs.find((tab) => tab.name === activeTab.value);
+  if (activeTabData) {
+    label.value = activeTabData.label;
+  }
 };
 
 const activeComponent = computed(() => {

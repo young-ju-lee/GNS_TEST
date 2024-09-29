@@ -114,28 +114,28 @@
         "subMenu": [
           {
             "title": "인터넷전화서비스",
-            "link": "/service/ipservice_soip",
+            "link": "/service/soip?tab=service",
             "show": true,
             "intro": "",
             "subMenu": []
           },
           {
             "title": "모바일행정전화 서비스",
-            "link": "/service/wireless_m_internetphone",
+            "link": "/service/soip?tab=mobile_gov",
             "show": true,
             "intro": "",
             "subMenu": []
           },
           {
             "title": "인터넷 전화 인프라",
-            "link": "/service/ipservice_soip_infra",
+            "link": "/service/soip?tab=infra",
             "show": true,
             "intro": "",
             "subMenu": []
           },
           {
             "title": "모바일행정전화 인프라",
-            "link": "/service/wireless_m_internetphone_infra",
+            "link": "/service/soip?tab=mobile_gov_infra",
             "show": true,
             "intro": "",
             "subMenu": []
@@ -150,28 +150,28 @@
         "subMenu": [
           {
             "title": "무선데이터서비스",
-            "link": "/service/wireless_data",
+            "link": "/service/wireless?tab=service",
             "show": true,
             "intro": "",
             "subMenu": []
           },
           {
             "title": "IoT서비스",
-            "link": "/service/iot_service",
+            "link": "/service/wireless?tab=iot",
             "show": true,
             "intro": "",
             "subMenu": []
           },
           {
             "title": "무선 인프라",
-            "link": "/service/wireless_infra",
+            "link": "/service/wireless?tab=infra",
             "show": true,
             "intro": "",
             "subMenu": []
           },
           {
             "title": "IoT 인프라",
-            "link": "/service/iot_infra",
+            "link": "/service/wireless?tab=iot_infra",
             "show": true,
             "intro": "",
             "subMenu": []
@@ -186,7 +186,7 @@
         "subMenu": [
           {
             "title": "CCTV 전송회선 서비스",
-            "link": "/service/leased_cctv",
+            "link": "/service/cctv",
             "show": true,
             "intro": "",
             "subMenu": []

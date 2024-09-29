@@ -14,7 +14,12 @@
         </nuxt-link>
       </li>
       <li v-for="(item, index) in path" :key="index">
-        <nuxt-link :to="item.link">{{ item.title }}</nuxt-link>
+        <template v-if="index === path.length - 1">
+          {{ item.title }}
+        </template>
+        <template v-else>
+          <nuxt-link :to="item.link">{{ item.title }}</nuxt-link>
+        </template>
       </li>
     </ul>
   </div>

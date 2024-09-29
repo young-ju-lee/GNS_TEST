@@ -3,8 +3,8 @@
 </template>
 
 <script setup lang="ts">
-import Service from "./basic/Service.vue";
-import Price from "./basic/Price.vue";
+import Service from "./service/Service.vue";
+import Price from "./service/Price.vue";
 
 const tabs = [
   { name: "service", label: "서비스정보", component: Service, icon: "live_help" },
