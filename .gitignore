@@ -14,4 +14,8 @@ logs
 .fleet
 .idea
 
+# Node modules
+node_modules
+package-lock.json
+
 pages/publish.vue
