@@ -117,6 +117,9 @@ const login = async () => { // async 키워드 추가
     // userStore 인스턴스 사용 및 .value로 실제 값을 전달
     const result = await userStore.login(username.value, password.value);
     console.log("로그인 후 리다이렉트할 주소:", result);
+    if(result.config.notNeedAuth === true){
+      window.location.href = "https://dev.gns.kt.com.main.do"
+    }
   } catch (error) {
     console.error("로그인 실패:", error);
   }
