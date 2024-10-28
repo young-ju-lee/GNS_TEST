@@ -13,7 +13,7 @@ export const useUserStore = defineStore('user', {
     async login(memId: string, memPwd: string): Promise<string | null> {
         const params = new URLSearchParams(window.location.search);
         const redirectTo = params.get('redirectTo');
-        await ApiService.Instance.post(
+        const params1 = ApiService.Instance.post(
             '/user/login',
             { // 객체 형태로 요청 본문 데이터 전달
               memId,
@@ -27,7 +27,8 @@ export const useUserStore = defineStore('user', {
             }
         );
   
-        return redirectTo ? decodeURIComponent(redirectTo) : null;
+        //return redirectTo ? decodeURIComponent(redirectTo) : null;
+        return params1;
     },
   },
 });
